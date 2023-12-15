@@ -1,6 +1,6 @@
 #!/usr/bin/python3
 """
- User Model
+User Model
 """
 import hashlib
 import uuid
@@ -35,7 +35,7 @@ class User():
         Password setter:
         - `None` if `pwd` is `None`
         - `None` if `pwd` is not a string
-        - Hash `pwd` in MD5 before assign to `__password`
+        - Hash `pwd` in MD5 before assigning to `__password`
         """
         if pwd is None or type(pwd) is not str:
             self.__password = None
@@ -54,7 +54,7 @@ class User():
             return False
         if self.__password is None:
             return False
-        return hashlib.md5(pwd.encode()).hexdigest().upper() == self.__password
+        return hashlib.md5(pwd.encode()).hexdigest().lower() == self.__password
 
 
 if __name__ == '__main__':
@@ -91,10 +91,10 @@ if __name__ == '__main__':
         print("is_valid_password should return False if it's not the right password")
 
     if user_1.is_valid_password(None):
-        print("is_valid_password should return False if compare with None")
+        print("is_valid_password should return False if compared with None")
 
     if user_1.is_valid_password(89):
-        print("is_valid_password should return False if compare with integer")
+        print("is_valid_password should return False if compared with an integer")
 
     if user_2.is_valid_password("No pwd"):
         print("is_valid_password should return False if no password set before")
