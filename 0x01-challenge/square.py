@@ -1,6 +1,7 @@
 #!/usr/bin/python3
 """A module declaring and calling a class Square"""
 
+
 class Square():
     """
     Class Square definition. Methods:
@@ -29,6 +30,7 @@ class Square():
     def __str__(self):
         """String representation of a square"""
         return "{}/{}".format(self.width, self.height)
+
 
 if __name__ == "__main__":
     s = Square(width=12, height=9)
