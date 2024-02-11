@@ -25,6 +25,7 @@ class User():
     
 if __name__ == "__main__":
 
+    s = square(width=12, height=9)
     u = User()
     u.email = "john@snow.com"
     print(u.email)
