@@ -1,21 +1,20 @@
 #!/usr/bin/python3
-"""a module declaring and calling a class Square"""
+"""Sqaure: Declaration and calling"""
 
 
 class Square():
     """
-    class square definition. Methods:
+    Defenition and Methods:
     - constructor
-    - area_of_my_square: returns the area of a square
-    - perimeter_of_my_square: returns perimeter of a square
+    - area_of_my_square: returns the area
+    - perimeter_of_my_square: returns perimeter
     - str: defines and returns the string respresentation
-    of a square
     """
     width = 0
     height = 0
 
     def __init__(self, *args, **kwargs):
-        """initiates a new Square object"""
+        """initiation"""
         for key, value in kwargs.items():
             setattr(self, key, value)
 
@@ -24,11 +23,11 @@ class Square():
         return self.width * self.height
 
     def permiter_of_my_square(self):
-        """ Perimeter of a square """
+        """ Perimeter """
         return (self.width * 2) + (self.height * 2)
 
     def __str__(self):
-        """ string representation of a square """
+        """ string representation """
         return "{}/{}".format(self.width, self.height)
 
 
